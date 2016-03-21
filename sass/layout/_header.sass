@@ -1,0 +1,143 @@
+#header
+	background: #2c3e50
+	font-size: 0
+	position: relative
+	z-index: 1001
+	+breakpoint($break-767)
+		text-align: center
+		position: fixed
+		top: 0
+		right: 0
+		left: 0
+	.logo
+		display: inline-block
+		+transition(0.4s)
+		+breakpoint($break-767)
+			float: left
+		&:hover
+			+opacity(0.5)
+	.header-menu
+		float: right
+		margin-right: 27.7%
+		+breakpoint($break-767)
+			float: none 
+			display: none
+		li 
+			float: left
+			margin: 14px 20px
+		a 
+			color: #fff
+			font-size: 15px
+			font-weight: 400
+			+transition(0.5s)
+			&:hover
+				color: #62e3a2
+	.enter
+		float: right
+		color: #fff
+		background: #25a55b
+		padding: 10px 22px
+		font-weight: 500
+		margin: 4px 1px 4px 0px
+		+border-radius(3px)
+		font-size: 15px
+		+transition(0.5s)
+		&:hover
+			color: #b5f5d5
+			background: #01632b
+	.menu-button
+		display: none 
+		+breakpoint($break-767)
+			height: 34px
+			width: 30px
+			display: inline-block
+			margin: auto
+			cursor: pointer
+			overflow: hidden
+			+transition(0.3s)
+			vertical-align: top
+			margin: 5px 0px 5px 0px
+			&:hover
+				.burger
+					transform: translateX(0px) !important
+		.burger
+			position: relative
+			display: block
+			margin-top: 4px
+			height: 3px
+			width: 30px
+			overflow: hidden
+			opacity: 1
+			+transition(0.3s)
+			&:nth-child(1)
+				transform: translateX(-1px)
+			&:nth-child(2)
+				transform: translateX(-14px)
+			&:nth-child(3)
+				transform: translateX(-9px)				
+			&:nth-child(4)
+				transform: translateX(-11px)
+		.inner
+			background: #fff
+			display: block
+			width: 100%
+			height: 100%
+.open
+	+transition(0.5s)
+	#header
+		.menu-button
+			.burger
+				+transition(0.3s)
+				&:nth-child(1)
+					transform: translateX(0px)
+					+rotate(135deg)
+					margin-top: 15px
+				&:nth-child(2)
+					transform: translateX(0px)
+					display: none
+				&:nth-child(3)
+					transform: translateX(0px)
+					display: none		
+				&:nth-child(4)
+					transform: translateX(0px)
+					+rotate(45deg)
+					margin-top: -3px
+	.header-menu-mobile
+		+transition(0.5s)
+		margin-top: 0px
+		+opacity(1)
+		margin-right: 0
+		ul 
+			margin-right: 0
+.header-menu-mobile
+	display: block
+	background: rgba(#2c3e50,0.5)
+	+opacity(0)
+	+transition(0.5s)
+	margin-right: -100%
+	position: fixed
+	top: 0px
+	right: 0
+	z-index: 200
+	height: 100%
+	width: 100%
+	ul 
+		text-align: center
+		padding-top: 50px
+		background: rgba(#25a75c,1)
+		display: inline-block
+		position: fixed
+		margin-right: -100%
+		height: 100%
+		right: 0
+		top: 0
+	li 
+		padding: 8px 0px 
+	a 
+		color: #fff
+		font-size: 15px
+		font-weight: 400
+		+transition(0.5s)
+		padding: 0px 50px
+		&:hover
+			color: #62e3a2

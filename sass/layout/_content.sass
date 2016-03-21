@@ -1,0 +1,98 @@
+@import content/something-about-you-item
+@import content/register
+.slider
+	.flex-control-paging li a
+		background: #73837b
+	.flexslider
+		border: none
+		min-height: 150px
+	.flex-direction-nav .flex-prev
+		background: image-url("arrow-l.png") no-repeat center
+		left: 15.8%
+		+breakpoint($break-1120)
+			left: 8%
+	.flex-direction-nav .flex-next
+		background: image-url("arrow-r.png") no-repeat center
+		right: 15.8%
+		+breakpoint($break-1120)
+			right: 8%
+	.flex-control-nav
+		bottom: 20px
+		+breakpoint($break-479)
+			bottom: 7px
+	.flex-control-nav li
+		margin: 0 2px
+		overflow: hidden
+	.flexslider .slides > li
+		position: relative
+		min-height: 150px
+		overflow: hidden
+	.flexslider .slides img
+		+breakpoint($break-479)
+			width: 200%
+			margin-left: -50%
+			max-width: none
+	.flex-control-paging li a:hover
+		background: #2c3e50
+	.flex-control-paging li a.flex-active
+		background: #2c3e50
+	.flex-control-paging li a
+		width: 16px
+		height: 16px
+	.wrapper
+		position: absolute
+		top: 0
+		right: 0
+		left: 0
+		bottom: 0
+	.slides-text
+		max-width: 380px
+		position: absolute
+		z-index: 500
+		top: 14% 
+		right: 13.6%
+		+box-sizing(border-box)
+		padding: 0px 10px
+		white-space: pre-wrap
+		text-align: center
+		display: block
+		+breakpoint($break-1120)
+			top: 9%
+		+breakpoint($break-1023)
+			white-space: normal
+			top: 15%
+		+breakpoint($break-479)
+			top: 7%
+			max-width: 150px
+		h4
+			font-size: 55px
+			line-height: 65px
+			color: #555555
+			font-weight: 100
+			+breakpoint($break-1023)
+				font-size: 35px
+				line-height: 40px
+			+breakpoint($break-767)
+				font-size: 20px
+				line-height: 24px
+		a 
+			font-size: 20px
+			display: inline-block
+			color: #fff
+			background: #25a55b
+			padding: 10px 24px
+			+border-radius(3px)
+			font-weight: 400
+			+transition(0.5s)
+			&:hover
+				color: #b5f5d5
+				background: #01632b
+			+breakpoint($break-767)
+				font-size: 14px
+		.go
+			display: block
+			margin-top: -26px
+			+breakpoint($break-1023)
+				margin-top: 10px
+	img 
+		position: relative
